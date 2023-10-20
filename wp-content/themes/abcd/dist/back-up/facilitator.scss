@@ -1,0 +1,225 @@
+.facilitator{
+    margin: 100px 0;
+    @include Res(m-14){
+        margin: 80px 0;
+    }
+    @include Res(m-9){
+        margin: 60px 0;
+    }
+    @include Res(m-4){
+        margin: 40px 0;
+    }
+    .title{
+        text-align: center;
+        .desc{
+            max-width: 730px;
+            margin: 0 auto 50px;
+            @include Res(m-9){
+                margin: 0 auto 30px;
+            }
+            @include Res(m-4){
+                margin: 0 auto 15px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $font-MontserratRegular;
+                color: $color-black;
+                font-weight: 400;
+                @include Res(m-9){
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                @include Res(m-4){
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .content{
+        .child{
+            margin-bottom: 35px;
+            box-shadow: 0px 1px 5px 0px #0000001A;
+            padding: 30px 60px;
+            cursor: pointer;
+            @include Res(m-9){
+                margin-bottom: 25px;
+            }
+            @include Res(m-4){
+                margin-bottom: 15px;
+            }
+            .image{
+                figure{
+                    margin: 0;
+                    padding-top: calc(0.491978 * 100%);
+                    width: 100%;
+                    height: 0;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .popup{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px 50px;
+        box-shadow: 0px 0px 4px 0px #0000001F;
+        background: $color-white;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 10;
+        width: 570px;
+        display: none;
+        .top{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            max-width: 350px;
+            margin-bottom: 30px;
+            .logo{
+                width: 145px;
+                figure{
+                    margin: 0;
+                    padding-top: calc(0.643356 * 100%);
+                    width: 100%;
+                    height: 0;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+            .text{
+                flex: 1;
+                h4{
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $color-main;
+                    margin: 0;
+                    font-family: $font-MontserratSemiBold;
+                    font-weight: 600;
+                }
+            }
+        }
+        .bottom{
+            margin-right: 50px;
+            .item{
+                display: grid;
+                grid-template-columns: 105px 1fr;
+                gap: 70px;
+                margin-bottom: 15px;
+                &:nth-last-child(1){
+                    margin-bottom: 0;
+                }
+                .left{
+                    h4{
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin: 0;
+                        font-family: $font-MontserratSemiBold;
+                        font-weight: 600;
+                        color: $color-black;
+                    }
+                }
+                .right{
+                    a{
+                        text-decoration: none;
+                        h4{
+                            color: $color-main;
+                            font-weight: 500;
+                            font-family: $font-MontserratMedium;
+                        }
+                    }
+                    h4{
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin: 0;
+                        font-family: $font-MontserratRegular;
+                        font-weight: 400;
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+        .close-popup{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+}
+// .number-page{
+//     margin-top: 30px;
+//     ul{
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         gap: 10px;
+//         margin: 0;
+//         padding: 0;
+//         list-style: none;
+//         li{
+//             padding: 10px 15px;
+//             border: 1px solid #CDDEE8;
+//             border-radius: 5px;
+//             font-size: 12px;
+//             line-height: 15px;
+//             font-family: $font-MontserratMedium;
+//             font-weight: 500;
+//             color: $color-black;
+//             &:nth-child(1){
+//                 border: none;
+//                 i{
+//                     color:$linear-5;
+//                 }
+//             }
+//             &:nth-last-child(1){
+//                 border: none;
+//                 i{
+//                     color:$linear-5;
+//                 }
+//             }
+//         }
+//         .active{
+//             background: $linear-5;
+//             color: $color-white;
+//         }
+//     }
+// }
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-black;
+    opacity: 0.25;
+    z-index: 1;
+    display: none;
+}

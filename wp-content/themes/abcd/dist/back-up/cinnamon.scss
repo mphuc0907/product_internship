@@ -1,0 +1,754 @@
+.sector{
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: 650px 1fr;
+    gap: 90px;
+    @include Res(m-14){
+        margin: 80px 0;
+        grid-template-columns: 550px 1fr;
+        gap: 50px;
+    }
+    @include Res(m-9){
+        margin: 60px 0;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    @include Res(m-4){
+        margin: 40px 0;
+    }
+    .image{
+        figure{
+            padding-top: calc(0.676923 * 100%);
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            width: 100%;
+            height: 0;
+            img{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .text{
+        .title{
+            padding-bottom: 20px;
+            position: relative;
+            @include Res(m-9){
+                padding-bottom: 15px;
+            }
+            @include Res(m-4){
+                padding-bottom: 10px;
+            }
+            h2,h3,h4,h5,h6{
+                font-size: 36px;
+                line-height: 44px;
+                margin: 0;
+                color: $color-black;
+                font-weight: 700;
+                font-family: $font-MontserratBold;
+                text-transform: capitalize;
+                @include Res(m-14){
+                    font-size: 32px;
+                    line-height: 40px;
+                    }
+                    @include Res(m-9){
+                        font-size: 26px;
+                        line-height: 34px;
+                    }
+                    @include Res(m-4){
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+            }
+        }
+        .desc{
+            margin: 30px 0;
+            @include Res(m-9){
+                margin: 20px 0;
+            }
+            @include Res(m-4){
+                margin: 10px 0;
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                color: $color-black;
+                font-family: $font-MontserratRegular;
+                font-weight: 400;
+                @include Res(m-9){
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                @include Res(m-9){
+                    font-size: 12px;
+                    line-height: 20px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .action{
+            padding: 10px 30px;
+            background: $linear-5;
+            border-radius: 10px;
+            width: fit-content;
+            a{
+                display: block;
+                text-decoration: none;
+                color: $color-white;
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $font-MontserratSemiBold;
+                font-weight: 600;
+                @include Res(m-9){
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                @include Res(m-4){
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+.our-activities{
+    padding: 130px 0;
+    background: url("./../img/Rectangle\ 60.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    @include Res(m-14){
+        padding: 110px 0;
+    }
+    @include Res(m-9){
+        padding: 60px 0 80px;
+    }
+    @include Res(m-4){
+        padding: 40px 0 60px;
+    }
+    &::before{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #252638E5;
+        content: "";
+    }
+    .content{
+        position: relative;
+        .slide-activities{
+            .child{
+                display: grid;
+                grid-template-columns: 1fr 575px;
+                gap: 180px;
+                @include Res(m-14){
+                    grid-template-columns: 1fr 530px;
+                    gap: 80px;
+                }
+                @include Res(m-9){
+                    display: block;
+                }
+                .text{
+                    @include Res(m-9){
+                        margin-bottom: 20px;
+                    }
+                    @include Res(m-4){
+                        margin-bottom: 10px;
+                    }
+                    .title{
+                        position: relative;
+                        padding-bottom: 20px;
+                        @include Res(m-9){
+                            padding-bottom: 15px;
+                        }
+                        @include Res(m-4){
+                            padding-bottom: 10px;
+                        }
+                        h2{
+                            font-size: 36px;
+                            line-height: 44px;
+                            margin: 0;
+                            color: $color-white;
+                            font-weight: 700;
+                            font-weight: $font-MontserratBold;
+                            @include Res(m-14){
+                                font-size: 32px;
+                                line-height: 40px;
+                                }
+                                @include Res(m-9){
+                                    font-size: 26px;
+                                    line-height: 34px;
+                                }
+                                @include Res(m-4){
+                                    font-size: 20px;
+                                    line-height: 30px;
+                                }
+                        }
+                    }
+                    .desc{
+                        margin: 40px 0;
+                        @include Res(m-9){
+                            margin: 20px 0;
+                        }
+                        @include Res(m-4){
+                            margin: 10px 0;
+                        }
+                        .name{
+                            margin-bottom: 20px;
+                            margin-right: 80px;
+                            @include Res(m-9){
+                                margin-bottom: 10px;
+                                margin-right: 0;
+                            }
+                            h3{
+                                font-size: 20px;
+                                line-height: 30px;
+                                color: $color-white;
+                                margin: 0;
+                                color: $color-white;
+                                font-family: $font-MontserratBold;
+                                font-weight: 700;
+                                @include Res(m-14){
+                                    font-size: 18px;
+                                    line-height: 28px;
+                                }
+                                @include Res(m-9){
+                                    font-size: 16px;
+                                    line-height: 26px;
+                                }
+                                @include Res(m-4){
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                        p{
+                            font-size: 16px;
+                            line-height: 22px;
+                            font-family: $font-MontserratRegular;
+                            font-weight: 400;
+                            color: $color-white;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            -webkit-line-clamp: 7;
+                            -moz-line-clamp: 7;
+                            -webkit-box-orient: vertical;
+                            -moz-box-orient: vertical;
+                            display: -webkit-box;
+                            @include Res(m-9){
+                                font-size: 14px;
+                                line-height: 20px;
+                                -webkit-line-clamp: 6;
+                                -moz-line-clamp: 6;
+                            }
+                            @include Res(m-4){
+                                font-size: 12px;
+                                line-height: 18px;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+                .image{
+                    figure{
+                        padding-top: calc(0.720767 * 100%);
+                        margin: 0;
+                        width: 100%;
+                        height: 0;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        position: relative;
+                        img{
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            .slick-next, .slick-prev{
+                bottom: 0;
+                top: unset;
+                transform: unset;
+                width: 35px;
+                height: 35px;
+                background: $color-white;
+                border-radius: 50%;
+                z-index: 1;
+                @include Res(m-9){
+                    bottom: -60px;
+                }
+                &:hover{
+                    background: $color-green;
+                }
+                &::before{
+                    display: none;
+                }
+                i{
+                    font-size: 16px;
+                    color: $color-black;
+                }
+            }
+            .slick-prev{
+                left: 0;
+            }
+            .slick-next{
+                left: 45px;
+            }
+            .slick-dots{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: fit-content;
+                height: fit-content;
+                margin: 0;
+                left: -200px;
+                top: -30px;
+                bottom: 50px;
+                gap: 80px;
+                @include Res(m-14){
+                    left: -85px;
+                    top: -20px;
+                    gap: 50px;
+                }
+                @include Res(m-9){
+                    left: 50%;
+                    top: unset;
+                    bottom: -60px;
+                    transform: translateX(-50%);
+                    gap: 30px;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+                &::before{
+                    height: 100%;
+                    width: 1px;
+                    background: $color-green;
+                    opacity: 0.7;
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 0;
+                    bottom: 0;
+                    @include Res(m-9){
+                        height: 1px;
+                        width: 100%;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 0;
+                        bottom: unset;
+                    }
+                }
+                li{
+                    width: 12px;
+                    height: 12px;
+                    background: rgba($color: $color-green, $alpha: 0.8);
+                    border-radius: 50%;
+                    position: relative;
+                    margin: 0;
+                    span{
+                        font-size: 4px;
+                        line-height: 5px;
+                        color: $color-black;
+                        font-family: $font-MontserratBold;
+                        font-weight: 700;
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .slick-active{
+                    width: 26px;
+                    height: 26px;
+                    background: $color-green;
+                    span{
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+        .numbers-counter{
+            color: $color-green;
+            font-size: 16px;
+            line-height: 19px;
+            font-family: $font-MontserratBold;
+            font-weight: 700;
+            left: -208px;
+            position: absolute;
+            transform: rotate(-90deg);
+            bottom: -15px;
+            @include Res(m-14){
+                left: -85px;
+            }
+            @include Res(m-9){
+                left: unset;
+                right: 0;
+                transform: unset;
+                bottom: -60px;
+            }
+        }
+    }
+}
+.partners{
+    margin: 100px 0;
+    @include Res(m-14){
+        margin: 80px 0;
+    }
+    @include Res(m-9){
+        margin: 60px 0;
+    }
+    @include Res(m-4){
+        margin: 40px 0;
+    }
+    .title{
+        text-align: center;
+        .name{
+            position: relative;
+            padding-bottom: 20px;
+            @include Res(m-9){
+                padding-bottom: 15px;
+            }
+            @include Res(m-4){
+                padding-bottom: 10px;
+            }
+            h2{
+                font-size: 36px;
+                line-height: 44px;
+                font-family: $font-MontserratBold;
+                font-weight: 700;
+                margin: 0;
+                color: $color-black;
+                @include Res(m-14){
+                    font-size: 32px;
+                    line-height: 40px;
+                    }
+                    @include Res(m-9){
+                        font-size: 26px;
+                        line-height: 34px;
+                    }
+                    @include Res(m-4){
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+            }
+            .underlined{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .desc{
+            margin: 30px auto 60px;
+            max-width: 730px;
+            @include Res(m-9){
+                margin: 20px auto 40px;
+            }
+            @include Res(m-4){
+                margin: 10px auto 20px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $font-MontserratRegular;
+                color: $color-black;
+                font-weight: 400;
+                @include Res(m-9){
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                @include Res(m-4){
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .content{
+        .child{
+            position: relative;
+            border-top: 1px solid $color-black;
+            padding: 45px 30px 30px;
+            @include Res(m-14){
+                padding: 30px 25px;
+            }
+            &:nth-child(2n+2) {
+                background: rgba(0, 124, 137, 0.05);
+            }
+            .name{
+                position: absolute;
+                top: -25px;
+                left: 0;
+                padding: 10px;
+                text-align: center;
+                min-width: 240px;
+                z-index: 1;
+                background: #242D64;
+                h4{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-family: $font-MontserratSemiBold;
+                    color: $color-white;
+                    font-weight: 600;
+                    margin: 0;
+                    @include Res(m-14){
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                }
+            }
+            .detail{
+                display: flex;
+                justify-content: space-between;
+                .item{
+                    figure{
+                        margin: 0;
+                        width: 170px;
+                    }
+                    .category{
+                        max-width: 220px;
+                        h4{
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-family: $font-MontserratRegular;
+                            font-weight: 400;
+                            color: $color-main;
+                            @include Res(m-14){
+                                font-size: 14px;
+                                line-height: 22px;
+                            }
+                        }
+                    }
+                    .desc{
+                        max-width: 715px;
+                        ul{
+                            margin: 0;
+                            padding: 0;
+                            li{
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-family: $font-MontserratRegular;
+                                color: $color-black-3;
+                                font-weight: 400;
+                                margin-bottom: 10px;
+                                @include Res(m-14){
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                }
+                                &:nth-last-child(1){
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .first{
+            .name{
+                background: $color-main;
+            }
+        }
+        .second{
+            .name{
+                background: #B1DDD3;
+                h4{
+                    color: $color-main;
+                }
+            }
+        }
+    }
+}
+.number-page{
+    margin-top: 60px;
+    @include Res(m-9){
+        margin-top: 40px;
+    }
+    @include Res(m-4){
+        margin-top: 20px;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+            border-radius: 5px;
+            position: relative;
+            width: 36px;
+            height: 36px;
+            border: 1px solid $color-smoke;
+            cursor: pointer;
+            &:hover{
+                background: $linear-5;
+                a,i,span{
+                    color: $color-white;
+                }
+            }
+            &:nth-child(1){
+                border: none;
+            }
+            &:nth-last-child(1){
+                border: none;
+            }
+            span{
+                font-size: 12px;
+                line-height: 14px;
+                font-family: $font-MontserratMedium;
+                font-weight: 500;
+                color: $color-black;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 5px;
+            }
+            a{
+                text-decoration: none;
+                font-size: 12px;
+                line-height: 14px;
+                font-family: $font-MontserratMedium;
+                font-weight: 500;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                color: $color-black;
+                display: flex;
+                align-items: center;
+                padding: 0 15px;
+                border-radius: 5px;
+                // border: 1px solid $color-smoke;
+            }
+            i{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .current{
+                width: 100%;
+                height: 100%;
+                background: $linear-5;
+                color: $color-white;
+                display: flex;
+                align-items: center;
+                padding: 0 15px;
+            }
+        }
+        .active{
+            background: $linear-5;
+            a{
+                color: $color-white;
+            }
+        }
+    }
+}
+.photo-gallery{
+    margin: 100px 0;
+    @include Res(m-14){
+        margin: 80px 0;
+    }
+    @include Res(m-14){
+        margin: 60px 0;
+    }
+    @include Res(m-14){
+        margin: 40px 0;
+    }
+    .title{
+        position: relative;
+        padding-bottom: 20px;
+        text-align: center;
+        @include Res(m-9){
+            padding-bottom: 15px;
+        }
+        @include Res(m-4){
+            padding-bottom: 10px;
+        }
+        h2{
+            font-size: 36px;
+            line-height: 44px;
+            font-family: $font-MontserratBold;
+            margin: 0;
+            font-weight: 700;
+            color: $color-black;
+            @include Res(m-14){
+                font-size: 32px;
+                line-height: 40px;
+                }
+                @include Res(m-9){
+                    font-size: 26px;
+                    line-height: 34px;
+                }
+                @include Res(m-4){
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+        }
+        .underlined{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .content{
+        margin-top: 50px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-auto-rows: 260px;
+        grid-auto-flow: dense;
+        @include Res(m-9){
+            gap: 10px;
+        }
+        .first{
+            grid-column: span 2;
+        }
+        .second{
+            grid-row: span 2;
+        }
+        .child{
+            cursor: pointer;
+            figure{
+                margin: 0;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                border-radius: 5px;
+                img{
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

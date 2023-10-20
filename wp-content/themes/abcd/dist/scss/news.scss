@@ -1,0 +1,809 @@
+.news{
+    margin-bottom: 100px;
+    @include Res(m-14){
+        margin-bottom: 80px;
+    }
+    @include Res(m-9){
+        margin-bottom: 60px;
+    }
+    @include Res(m-14){
+        margin-bottom: 40px;
+    }
+    .category{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include Res(m-4){
+            flex-direction: column;
+            gap: 10px;
+        }
+        .title{
+            h2{
+                font-size: 36px;
+                line-height: 44px;
+                margin: 0;
+                color: $color-black;
+                font-family: $font-InterBold;
+                font-weight: 700;
+                @include Res(m-14){
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+                @include Res(m-9){
+                    font-size: 26px;
+                    line-height: 34px;
+                }
+                @include Res(m-4){
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+            }
+        }
+        .filter{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            @include Res(m-9){
+                gap: 20px;
+            }
+            @include Res(m-4){
+                gap: 5px;
+            }
+            h4{
+                font-size: 16px;
+                line-height: 19px;
+                color: $color-main;
+                margin: 0;
+                font-family: $font-InterSemiBold;
+                font-weight: 600;
+                @include Res(m-9){
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+            .mom{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                @include Res(m-4){
+                    gap: 5px;
+                }
+                .child{
+                    select{
+                        width: 115px;
+                        border: none;
+                        background: none;
+                        outline: none;
+                        font-size: 16px;
+                        line-height: 19px;
+                        font-family: $font-InterMedium;
+                        font-weight: 500;
+                        color: $color-main;
+                        @include Res(m-4){
+                            font-size: 14px;
+                            line-height: 17px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content{
+        margin: 50px 0;
+        @include Res(m-9){
+            margin: 30px 0;
+        }
+        @include Res(m-4){
+            margin: 20px 0;
+        }
+        .news-main{
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            .image{
+                figure{
+                    position: relative;
+                    margin: 0;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 0;
+                    padding-top: calc(0.637544 * 100%);
+                    &::before{
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 34.6%, rgba(0, 0, 0, 0.85) 99.91%);
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        position: absolute;
+                    }
+                    img{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .text{
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
+                right: 30px;
+                @include Res(m-9){
+                    bottom: 20px;
+                    left: 20px;
+                    right: 20px;
+                }
+                .date{
+                    h4{
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-family: $font-MontserratMedium;
+                        margin: 0;
+                        color: $color-smoke;
+                        font-weight: 500;
+                        @include Res(m-9){
+                            font-size: 14px;
+                            line-height: 22px;
+                        }
+                        @include Res(m-4){
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+                .name{
+                    margin-top: 5px;
+                    a{
+                        text-decoration: none;
+                        h3{
+                            font-size: 28px;
+                            line-height: 42px;
+                            font-family: $font-MontserratSemiBold;
+                            font-weight: 600;
+                            margin: 0;
+                            color: $color-white;
+                            @include Res(m-14){
+                                font-size: 24px;
+                                line-height: 36px;
+                            }
+                            @include Res(m-9){
+                                font-size: 20px;
+                                line-height: 32px;
+                            }
+                            @include Res(m-4){
+                                font-size: 14px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .news-hot{
+            @include Res(m-9){
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 20px;
+            }
+            @include Res(m-4){
+                gap: 10px;
+            }
+            .child{
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                &:nth-last-child(1){
+                    margin-bottom: 0;
+                }
+                .image{
+                    figure{
+                        margin: 0;
+                        padding-top: calc(0.629539 * 100%);
+                        width: 100%;
+                        height: 0;
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 10px;
+                        img{
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .text{
+                    position: absolute;
+                    left: 20px;
+                    right: 20px;
+                    bottom: 15px;
+                    @include Res(m-9){
+                        left: 10px;
+                        right: 10px;
+                        bottom: 10px;
+                    }
+                    @include Res(m-4){
+                        left: 5px;
+                        right: 5px;
+                        bottom: 5px;
+                    }
+                    .date{
+                        h4{
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: $color-smoke;
+                            margin: 0;
+                            font-family: $font-MontserratMedium;
+                            font-weight: 500;
+                            @include Res(m-9){
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                            @include Res(m-4){
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                    .name{
+                        a{
+                            text-decoration: none;
+                            h3{
+                                margin: 0;
+                                font-size: 18px;
+                                line-height: 27px;
+                                color: $color-white;
+                                font-family: $font-MontserratSemiBold;
+                                font-weight: 600;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                -webkit-line-clamp: 2;
+                                -moz-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                -moz-box-orient: vertical;
+                                display: -webkit-box;
+                                @include Res(m-9){
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                }
+                                @include Res(m-4){
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .other{
+        .list-other{
+            box-shadow: 0px 0px 8px 0px #0000001A;
+            padding: 30px 25px;
+            border-radius: 10px;
+            @include Res(m-9){
+                padding: 20px;
+            }
+            .child{
+                display: grid;
+                grid-template-columns: 307px 1fr;
+                gap: 30px;
+                margin-bottom: 30px;
+                align-items: center;
+                &:nth-last-child(1){
+                    margin-bottom: 0;
+                }
+                @include Res(m-9){
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                    margin-bottom: 20px;
+                }
+                @include Res(m-4){
+                    gap: 10px;
+                    margin-bottom: 10px;
+                }
+                .image{
+                    figure{
+                        margin: 0;
+                        padding-top: calc(0.687296 * 100%);
+                        border-radius: 10px;
+                        position: relative;
+                        width: 100%;
+                        height: 0;
+                        overflow: hidden;
+                        img{
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .text{
+                    .name{
+                        a{
+                            text-decoration: none;
+                            h3{
+                                font-size: 20px;
+                                line-height: 30px;
+                                font-family: $font-MontserratSemiBold;
+                                font-weight: 600;
+                                margin: 0;
+                                color: $color-black;
+                                @include Res(m-9){
+                                    font-size: 18px;
+                                    line-height: 28px;
+                                }
+                                @include Res(m-4){
+                                    font-size: 16px;
+                                    line-height: 26px;
+                                }
+                            }
+                        }
+                    }
+                    .desc{
+                        margin: 15px 0;
+                        @include Res(m-9){
+                            margin: 10px 0;
+                        }
+                        p{
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-family: $font-MontserratRegular;
+                            color: $color-black;
+                            opacity: 0.8;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            -webkit-line-clamp: 3;
+                            -moz-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            -moz-box-orient: vertical;
+                            display: -webkit-box;
+                            @include Res(m-9){
+                                font-size: 14px;
+                                line-height: 22px;
+                                margin-bottom: 5px;
+                            }
+                            @include Res(m-4){
+                                font-size: 12px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                    .date{
+                        h4{
+                            margin: 0;
+                            font-size: 14px;
+                            line-height: 21px;
+                            color: $color-black;
+                            opacity: 0.8;
+                            font-family: $font-MontserratRegular;
+                            font-weight: 400;
+                            @include Res(m-9){
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                            @include Res(m-4){
+                                font-size: 10px;
+                                line-height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+            @include Res(m-9){
+                margin-top: 20px;
+            }
+            .title{
+                position: relative;
+                padding-bottom: 15px;
+                h2{
+                    font-size: 22px;
+                    line-height: 24px;
+                    margin: 0;
+                    font-family: $font-MontserratBold;
+                    font-weight: 700;
+                    color: $color-black;
+                    @include Res(m-9){
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
+                    @include Res(m-4){
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .recent{
+                .list{
+                    margin: 20px 0 40px;
+                    @include Res(m-9){
+                        margin: 20px 0;
+                    }
+                    .child{
+                        margin-bottom: 20px;
+                        &:nth-last-child(1){
+                            margin-bottom: 0;
+                        }
+                        display: grid;
+                        grid-template-columns: 128px 1fr;
+                        gap: 20px;
+                        align-items: center;
+                        @include Res(m-9){
+                            gap: 10px;
+                        }
+                        .image{
+                            figure{
+                                margin: 0;
+                                padding-top: calc(0.648437 * 100%);
+                                width: 100%;
+                                overflow: hidden;
+                                position: relative;
+                                height: 0;
+                                border-radius: 10px;
+                                img{
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                        .text{
+                            .name{
+                                margin-bottom: 10px;
+                                a{
+                                    text-decoration: none;
+                                    h4{
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                        font-family: $font-MontserratSemiBold;
+                                        color: $color-black;
+                                        margin: 0;
+                                        font-weight: 600;
+                                        @include Res(m-9){
+                                            font-size: 14px;
+                                            line-height: 22px;
+                                        }
+                                        @include Res(m-4){
+                                            font-size: 12px;
+                                            line-height: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                            .date{
+                                h5{
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                    color: $color-black;
+                                    opacity: 0.8;
+                                    font-family: $font-MontserratRegular;
+                                    margin: 0;
+                                    @include Res(m-9){
+                                        font-size: 12px;
+                                        line-height: 18px;
+                                    }
+                                    @include Res(m-4){
+                                        font-size: 10px;
+                                        line-height: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .js-gallery{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 10px;
+                margin-top: 30px;
+                figure{
+                    margin: 0;
+                    width: 100%;
+                    height: 0;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    padding-top: calc(0.644628 * 100%);
+                    cursor: pointer;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        .number-page{
+            ul{
+                justify-content: start;
+            }
+        }
+    }
+}
+.detail-news{
+    margin-bottom: 100px;
+    @include Res(m-14){
+        margin-bottom: 80px;
+    }
+    @include Res(m-9){
+        margin-bottom: 60px;
+    }
+    @include Res(m-4){
+        margin-bottom: 40px;
+    }
+    .main{
+        .title{
+            h2{
+                font-size: 36px;
+                line-height: 44px;
+                font-family: $font-MontserratBold;
+                margin: 0;
+                color: $color-black;
+                font-weight: 700;
+                @include Res(m-14){
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+                @include Res(m-9){
+                    font-size: 26px;
+                    line-height: 34px;
+                }
+                @include Res(m-4){
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+            }
+        }
+        .date{
+            padding: 20px 0;
+            border-bottom: 1px solid #F1F1F1;
+            margin-bottom: 30px;
+            @include Res(m-9){
+                padding: 10px 0;
+                margin-bottom: 20px;
+            }
+            @include Res(m-4){
+                margin-bottom: 10px;
+            }
+            h4{
+                margin: 0;
+                font-size: 16px;
+                line-height: 26px;
+                font-family: $font-MontserratMedium;
+                font-weight: 500;
+                color: #808076;
+                @include Res(m-4){
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+        .desc{
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $font-MontserratRegular;
+                font-weight: 400;
+                color: $color-black;
+                margin-bottom: 20px;
+                @include Res(m-9){
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                @include Res(m-4){
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .image{
+            margin: 30px 0;
+            @include Res(m-9){
+                margin: 20px 0;
+            }
+            @include Res(m-4){
+                margin: 10px 0;
+            }
+            figure{
+                margin: 0;
+                padding-top: calc(0.485242 * 100%);
+                width: 100%;
+                height: 0;
+                position: relative;
+                overflow: hidden;
+                border: 10px;
+                img{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .tag{
+            padding-top: 25px;
+            border-top: 1px solid #F1F1F1;
+            ul{
+                max-width: 465px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li{
+                    padding: 5px 20px;
+                    border: 1px solid #343538;
+                    border-radius: 20px;
+                    a{
+                        text-decoration: none;
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-family: $font-MontserratRegular;
+                        text-decoration: none;
+                        color: #343538;
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        .title{
+            position: relative;
+            padding-bottom: 15px;
+            h2{
+                font-size: 22px;
+                line-height: 24px;
+                margin: 0;
+                font-family: $font-MontserratBold;
+                font-weight: 700;
+                color: $color-black;
+                @include Res(m-9){
+                    font-size: 20px;
+                    line-height: 22px;
+                }
+                @include Res(m-4){
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+            }
+        }
+        .recent{
+            .list{
+                margin: 20px 0 40px;
+                @include Res(m-4){
+                    margin: 10px 0;
+                }
+                .child{
+                    margin-bottom: 20px;
+                    &:nth-last-child(1){
+                        margin-bottom: 0;
+                    }
+                    display: grid;
+                    grid-template-columns: 128px 1fr;
+                    gap: 20px;
+                    align-items: center;
+                    @include Res(m-4){
+                        gap: 10px;
+                    }
+                    .image{
+                        figure{
+                            margin: 0;
+                            padding-top: calc(0.648437 * 100%);
+                            width: 100%;
+                            overflow: hidden;
+                            position: relative;
+                            height: 0;
+                            border-radius: 10px;
+                            img{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .text{
+                        .name{
+                            margin-bottom: 10px;
+                            a{
+                                text-decoration: none;
+                                h4{
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    font-family: $font-MontserratSemiBold;
+                                    color: $color-black;
+                                    margin: 0;
+                                    font-weight: 600;
+                                    @include Res(m-4){
+                                        font-size: 14px;
+                                        line-height: 22px;
+                                    }
+                                }
+                            }
+                        }
+                        .date{
+                            h5{
+                                font-size: 14px;
+                                line-height: 21px;
+                                color: $color-black;
+                                opacity: 0.8;
+                                font-family: $font-MontserratRegular;
+                                margin: 0;
+                                @include Res(m-4){
+                                    font-size: 12px;
+                                    line-height: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .js-gallery{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            margin-top: 30px;
+            figure{
+                margin: 0;
+                width: 100%;
+                height: 0;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                padding-top: calc(0.644628 * 100%);
+                cursor: pointer;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
